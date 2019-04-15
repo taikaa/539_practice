@@ -1,9 +1,11 @@
 var i = 0;
 var title = 'About me';
 var speed = 50;
+
 // must demo first part in safari not Chrome 
 function typeWriter() {
 // 	//adjust for if the user prefers reduced motion
+	console.log("typewriter")
 	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     document.querySelector('.typewriter').innerHTML = title;
    
@@ -26,7 +28,7 @@ function weatherBalloon( cityID ) {
   .catch(function() {
     // catch any errors
   });
-}
+}	
 
 function drawWeather( d ) {
 var celcius = Math.round(parseFloat(d.main.temp)-273.15);
@@ -36,7 +38,9 @@ document.getElementById('temp').innerHTML = celcius + '&deg;' + 'C';
 
 }
 
-window.onload = function() {
-	typeWriter();
-	weatherBalloon( 3996063 ); //6167865
-}
+// document.onload = function() {
+// 	typeWriter();
+// 	weatherBalloon( 3996063 ); //6167865
+// }
+typeWriter();
+weatherBalloon( 3996063 );

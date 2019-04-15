@@ -644,6 +644,9 @@ div.card-back {
 .ux_grid {
 	display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    max-width: 50%;
+	margin: 0 auto;
+	grid-column-gap: 20px;
     grid-column-gap: 10px;
 }
 
