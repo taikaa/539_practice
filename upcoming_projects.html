@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name = 'viewport' content='width=device-width, initial-scale=1'>
+	<title>Upcoming Projects</title>
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<script>src="js/nav.js"</script>
+</head>
+<body>
+	<a class="skip-main" href="#main">Skip to main content</a>
+	<header>
+		<div class = "social social_header">
+						<a href="https://github.com/taikaa" target="_blank" > <i class="fab fa-github fa-3x social" aria-label="Link to my GitHub profile"></i></a>
+		</div>
+
+		<button id="hamburger">&#9776;</button>
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">About Me</a>
+				</li>
+				<li>
+					<a href="projects.html">Projects</a>
+				</li>
+				<li>
+					<a href="upcoming_projects.html" class="current">Upcoming Projects</a>
+				</li>
+				<li>
+					<a href="media/resume.pdf" target="_blank">Resume</a>
+				</li>
+
+			</ul>
+		</nav>
+			
+	</header>
+	<main id = "main">
+			<div class="upcoming_title">
+				<h1 class="upcoming">Current and Upcoming Projects</h1>
+			</div>
+			<br>
+		
+		<div class="upcoming_grid">
+			<div class="upcoming">
+				<h2>UX Research for a social media app for transgender people</h2>
+				<br>
+			<ul>
+				<li>For a side project I am helping out with the UX research for an app made for people within the trans/non-binary community to connect. It's called TransTime. I am very excited about social media and how platforms may be more inclusive to greater audiences of people. I hope to assist with the project on a development side in the future.</li>
+			</ul>
+			</div>
+			
+			<div class="upcoming">
+				<h2>Masculine of Center Gender Presentation as a Risk Factor for Experiencing Gender-Based Violence</h2>
+				<br>
+			<ul>
+			<li>
+				Continuing violence research with sexual and gender minority people, I am currently working on a publication that specifically looks as gender expression and gender identity as a risk factor for experiencing violence. 
+			</li>
+			</ul>
+		</div>
+			<div class="upcoming">
+			<h2>HIV prevention and treatment recommendations for clinicians working with transgender youth</h2>
+			<br>
+			<ul>
+				<li>
+					I am assisting with writing a book chapter for clinicians working with transgender youth and young adults.
+				</li>
+			</ul>
+			</div>
+			
+			<div class="upcoming">
+			<h2>Immigration and transgender identity</h2>
+			<br>
+			<ul>
+				<li>
+					I am doing a scoping review of all literature surrounding transgender or other gender minority identities and immigration status. We are focusing on the potential health effects that current policies have on transgender immigrants and people seeking asylum from Latin America.  
+				</li>
+			</ul>
+			</div>
+			<div class="upcoming">
+			<h2>Content themes within transgender/non-binary social media outlets</h2>
+			<br>
+			<ul>
+				<li>
+					As aforementioned, a large passion of mine is how minority communities use social media. Part of the research I do will continue with mixed methods analyses of content themes within social media outlets.
+				</li>
+			</ul>
+		</div>
+		</div>
+		<div class="upcoming_pic">
+			<img src="images/inprogress.jpg" alt="">
+		</div>
+	</main>
+
+
+<footer>
+	&copy; Taika Augustaitis <a href="https://github.com/taikaa" target="_blank" > <i class="fab fa-github fa-3x social" aria-label="Link to my GitHub profile"></i></a>
+</footer>
+	<script>
+		$('#hamburger').click(function() {
+			// $()
+			$('ul li').toggle('slow');
+		})
+
+		window.addEventListener('resize', function() {
+			console.log($('nav').css('display'))
+			if ($(window).width() > 780 && $('nav').css('display', 'none')) {
+				location.reload()
+			}
+		})
+
+	</script>	
+</body>
+</html>

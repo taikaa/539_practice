@@ -1,0 +1,181 @@
+<!-- linkedin icon, (soundcloud icon to be hip?) -->
+<!-- html5: + tab remember this ! --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name = 'viewport' content='width=device-width, initial-scale=1, minimum-scale=1'> <!--added minimum scale = 1' --> 
+	<title>About Me</title>
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>src="js/nav.js"</script>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<!--added google analytics --> 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137797563-1"></script>
+	<script>
+  	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+
+  	gtag('config', 'UA-137797563-1');
+	</script>
+
+
+</head>
+<body onload='typeWriter()'>
+	<a class="skip-main" href="#main">Skip to main content</a>
+	<header> 
+		<div class = "social social_header">
+						<a href="https://github.com/taikaa" target="_blank" > <i class="fab fa-github fa-3x social" aria-label="Link to my GitHub profile"></i></a>
+		</div>
+		
+		
+		<button id="hamburger">&#9776;</button>
+
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html" class="current nav_item">About Me</a>
+				</li>
+				<li>
+					<a href="projects.html" class="nav_item">Projects</a>
+				</li>
+				<li>
+					<a href="upcoming_projects.html" class="nav_item">Upcoming Projects</a>
+				</li>
+				<li>
+					<a href="media/resume.pdf" target="_blank" class="nav_item">Resume</a>
+				</li>
+
+			</ul>
+		</nav>
+	
+	</header>
+	<main id="main">
+		<!-- placing in background -->
+		<div class="background"></div>
+		<!-- <div class="about_me"> --> <!-- commented out -->
+		<h1 class="typewriter animation"></h1> 
+<div class="grid-container">
+		<div class="col_1">
+		<p>
+			
+			Hi, I'm Taika (he/him or they/them pronouns)<br>
+			<b>Information Student and Interdisciplinary Researcher</b><br>
+			Passion areas - Backend development and continuous learning
+		</p>
+
+		<img class = "me" src="images/me.jpg" alt="Me in a black sweater in front of the Pacific Ocean">
+
+		<p>
+			I love learning about other people's cultures and traveling to historical sites when I can. I have participated in martial arts -- shorin-ryu karate and then taekwondo -- since I was a child so one of my proudest accomplishments is keeping up with that.
+		</p>
+		
+
+		<p>
+			I am a Student at the University of Michigan School of Information. <br>
+			
+			My entry is a little bit nontraditional. I started out at the University of Michigan studying biomedical engineering. Then I switched majors to kinesiology and neurophysiology because it was where engineering concepts are applied to improve patient outcomes.
+		</p>
+		<p>
+			After graduating, I applied for research positions and graduate school rather than clinical roles. I wanted to increase my technical and critical thinking skills. Through my work in research I have strengthened my passion in increasing the accessibility of resources and products to others.
+		</p>
+	</div> <!-- end of first div --> 
+	
+
+	<!-- <div class="col_2"> -->
+	<div class="pyramid">
+			<img src="images/pyramid.jpg" alt="The pyramid of the moon at Teotihuacan">
+	</div>
+	<div class="flip-card">
+		<div class="card-animation">
+		<div id=flip-card-front class="card-front">Hover for temp 🌡️</div>
+		<div class='card-back'>
+			<div>Temp at Teotihuacan</div>
+			<div id='temp'></div>
+		</div>
+		</div>
+	</div>
+<!-- 	</div> -->
+</div>
+
+	</main>
+	<footer>
+		&copy; Taika Augustaitis <a href="https://github.com/taikaa" target="_blank" > <i class="fab fa-github fa-3x social" aria-label="Link to my GitHub profile"></i></a>
+	</footer>
+	<script>
+		$('#hamburger').click(function() {
+			// $()
+			$('ul li').toggle('slow');
+		})
+
+		window.addEventListener('resize', function() {
+			console.log($('nav').css('display'))
+			if ($(window).innerWidth() > 780 && $('nav li').attr('style') == 'display: none;') {
+				$('ul li').toggle();
+			}
+		})
+
+	</script>
+	<!-- load typewriter script --> 
+	<script type="text/javascript" src="js/index.js"></script>
+	<!-- get weather from API --> 
+	<!-- <script type="text/javascript" src="js/weatherapi.js"></script> -->
+
+<!-- 	<script type='text/javascript'>
+	function weatherBalloon( cityID ) {
+	  var key = '4d2453f3e759e62791f60c330479bb71';
+	  fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID+ '&appid=' + key)  
+	  .then(function(resp) { return resp.json() }) // Convert data to json
+	  .then(function(data) {
+	    // console.log(data);
+	    drawWeather(data);
+	  })
+	  .catch(function() {
+	    // catch any errors
+	  });
+	}
+
+	window.onload = function() {
+	typeWriter();
+	  weatherBalloon( 3996063 ); //6167865
+	}
+
+	function drawWeather( d ) {
+	var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+	var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+	
+	document.getElementById('temp').innerHTML = celcius + '&deg;' + 'C';
+	
+}
+
+
+	</script>
+<script type='text/javascript'>
+	var i = 0;
+	var title = 'About me';
+	var speed = 50;
+	// must demo first part in safari not Chrome 
+	function typeWriter() {
+	// 	//adjust for if the user prefers reduced motion
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+	    document.querySelector('.typewriter').innerHTML = title;
+	   
+	}
+	    else if (i < title.length) {
+	    document.querySelector('.typewriter').innerHTML += title.charAt(i);
+	    i++;
+	    setTimeout(typeWriter, speed);
+	  }
+	}
+</script> -->
+	
+</body>
+</html>

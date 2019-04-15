@@ -1,0 +1,80 @@
+<!--Note that this page will be where I will host the projects I've completed already but don't know how to make subheaders yet-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name = 'viewport' content='width=device-width, initial-scale=1'>
+	<title>Project Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>src="js/nav.js"</script>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+	<link rel="manifest" href="./site.webmanifest">
+	<script>src="js/nav.js"</script>
+	
+</head>
+<body>
+	<a class="skip-main" href="#main">Skip to main content</a>
+	<header>
+		<div class = "social social_header">
+						<a href="https://github.com/taikaa" target="_blank" > <i class="fab fa-github fa-3x social" aria-label="Link to my GitHub profile"></i></a>
+		</div>
+		
+		<button id="hamburger">&#9776;</button>
+
+		<nav>
+			<ul>
+				<li>
+					<a href="index.html">About Me</a>
+				</li>
+				<li>
+					<a href="projects.html" class="current">Projects</a>
+				</li>
+				<li>
+					<a href="upcoming_projects.html">Upcoming Projects</a>
+				</li>
+				<li>
+					<a href="media/resume.pdf" target="_blank">Resume</a>
+				</li>
+
+			</ul>
+		</nav>
+	</header> 
+	<main id="main">
+	<h1 class="projects">Projects</h1>
+	<div class="projects">
+		<div>
+			<a class="projects" href="ux.html"> <img src="images/ux_thumbnail.png" alt="UX: a clothing app for trans/non-binary users"><h2 class="projects">UX: Transgender clothing app</h2></a>
+				
+		</div>
+		
+	<!--I would like to animate this image with a trans flag and some text ASK for more help-->
+		<a class="projects" href="violence_research.html"> <img src="images/violence_research_thumbnail.png" alt="Violence Research projects"><h2>Violence against LGBTQ people</h2></a>
+			
+	</div>
+	
+	</main>
+	<footer>
+		&copy; Taika Augustaitis <a href="https://github.com/taikaa" target="_blank" > <i class="fab fa-github fa-3x social" aria-label="Link to my GitHub profile"></i></a>
+	</footer>
+	<script>
+		$('#hamburger').click(function() {
+			// $()
+			$('ul li').toggle('slow');
+		})
+
+		window.addEventListener('resize', function() {
+			console.log($('nav').css('display'))
+			if ($(window).width() > 780 && $('nav').css('display', 'none')) {
+				location.reload()
+			}
+		})
+
+	</script>
+</body>
+</html>
