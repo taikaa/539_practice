@@ -16,6 +16,8 @@
 	<link rel="manifest" href="./site.webmanifest">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>src="js/nav.js"</script>
+	<!-- <link rel="stylesheet" href="css/lightbox.css"> -->
+	<link rel="stylesheet" href="css/lightbox.css">
 </head>
 <body>
 	<a class="skip-main" href="#main">Skip to main content</a>
@@ -147,8 +149,17 @@
 		</div>
 
 
+		<!-- added lightbox -->
+		<div class='ux_grid'>
+			<a href="images/2z.png" data-lightbox='ux_set' data-alt='app login'><img src="images/2z.png" alt="app login"></a>
+			<a href="images/4z.png" data-lightbox='ux_set' data-alt='app homepage'> <img src="images/4z.png" alt="app homepage"></a>
+			<a href="images/5az.png" data-lightbox='ux_set' data-alt='app My Profile page'> <img src="images/5az.png" alt="app My Profile page"></a>
+			<a href="images/7z.png" data-lightbox='ux_set' data-alt='app browse items'> <img src="images/7z.png" alt="app browse items"></a>
+			<a href="images/9z.png" data-lightbox='ux_set' data-alt='app view item for sale'> <img src="images/9z.png" alt="app view item for sale"></a>
+			<a href="images/19z.png" data-lightbox='ux_set' data-alt='app view cart'><img src="images/19z.png" alt="app view cart"></a>
+		</div>
 
-			<div class="ux_grid">
+	<!-- 		<div class="ux_grid">
 				<div>
 					<img src="images/2z.png" alt="Screenshot of TSWAP prototype">
 				</div>
@@ -168,7 +179,7 @@
 					<img src="images/19z.png" alt="Screenshot of TSWAP prototype">
 				</div>
 				
-			</div> 
+			</div>  -->
 <button class='modal-button'>Open Modal</button>
 <!-- This section is required only once per page, before any videos appear. -->
 <div class='modal'>
@@ -275,5 +286,6 @@
 		})
 
 	</script>
+	<script src='js/lightbox.js'></script>
 </body>
 </html>

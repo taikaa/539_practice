@@ -327,62 +327,16 @@ img.companalysis {
 	border: 1px solid black;
 }
 
-
-/* -------- OZ Video Player ------- */
-/*.ozplayer-container {
-	padding-bottom: 5% !important;
-	margin: 5% 10% 0 10%;
-	width: 100%;
-	height: 100%;
-}*/
-
-
 div.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	visibility: hidden;
 }
 
-
-div.oz-modal {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
- /* height: 80%;*/
+#ozplayer-1-container {
+	visibility: hidden !important;
 }
 
-.close-modal {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  display: block;
-  font-size: 40px;
-}
-
-.close-modal:hover,
-.close-modal:focus {
-  color: black;
-  cursor: pointer;
-}
-
-.ozplayer-container {
-	/*margin: auto;*/
-	margin-left: 100px;
-	margin-top: 70px;
-	display: block;
-}
-
-.ozplayer {
-	margin: auto !important;
+button.modal-button {
+	visibility: hidden;
 }
 
 /* ----end ux page ----*/
@@ -640,17 +594,79 @@ div.card-back {
 	position: relative;
 	margin-right: 1%;
 }
-
+ /* ----- UX page ------- */
 .ux_grid {
 	display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 50%;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    max-width: 50% !important;
 	margin: 0 auto;
 	grid-column-gap: 20px;
     grid-column-gap: 10px;
 }
 
+/* OZ player video */
+/* -------- OZ Video Player ------- */
 
+button.modal-button {
+	visibility: visible;
+}
+
+div.modal {
+	visibility: visible;
+}
+
+
+div.modal {
+  display: none; 
+  visibility: visible;
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+div.oz-modal {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+ /* height: 80%;*/
+}
+
+.close-modal {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+  font-size: 40px;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: black;
+  cursor: pointer;
+}
+
+.ozplayer-container {
+	/*margin: auto;*/
+	margin-left: 100px;
+	margin-top: 70px;
+	display: block;
+}
+
+.ozplayer {
+	margin: auto !important;
+}
+
+
+/* ---------violence research page --------- */
 div.infographic_grid {
 	grid-template-columns: 25% 1fr 1fr 25%;
 	align-items: left;
@@ -687,6 +703,7 @@ div.upcoming_grid {
 	color: none;
 	background-color: none;
 }
+/* gets rid of animation that changes opacity on the projects page */
   div.projects img {
 	opacity: 1;
 }
@@ -695,4 +712,56 @@ i.social:hover {
 	opacity: 1;
 	color: black;
 }
+
+/* makes it so there is no a longer a flip card */
+div#flip-card-front {
+	visibility: hidden;
+}
+
+div.flip-card {
+	background-color: transparent;
+	width: 200px;
+	height: 50px;
+	/*margin-left: 15%;*/
+	/*display: inline-block;*/
+	/*margin-bottom: 5%;*/
+	perspective: 1000px;
+}
+
+div#flip-card-front {
+	visibility: visible;
+}
+
+div.card-animation {
+	position: relative;
+	height: 100%;
+	text-align: center;
+	transition: transform 0s;
+	transform-style: preserve-3d;
+}
+
+div.flip-card:hover .card-animation {
+	/*transform: rotateX(180deg);*/
+	transform: rotateX(0deg);
+	/*display: inline-block;*/
+}
+
+div.card-front, div.card-back {
+	position: absolute;
+	margin-left: 0%;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	/*display: inline-block;*/
+}
+
+
+div.card-back {
+	background-color: grey;
+	color: black;
+	/*transform: rotateX(180deg);*/
+	transform: rotateX(0deg);
+	font-size: 20px;
+}
+
 }
